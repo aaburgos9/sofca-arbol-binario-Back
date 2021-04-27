@@ -2,4 +2,7 @@
 
 
 Para configurar adecuadamente el proyecto verificar el archivo
+
 /arbolBinBack/src/main/resources/application.properties
+
+El puerto corre en el puerto server.port:8044 y el front usa http://localhost:8044/api/ para accedeer a los servicios
