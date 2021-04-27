@@ -11,4 +11,5 @@ Es necesario establecer usario y contraseña en:
 /arbolBinBack/src/main/resources/application.properties
 
 spring.datasource.username=
+
 spring.datasource.password=
