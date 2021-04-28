@@ -20,7 +20,7 @@ import com.sofca.arbolBinBack.Entity.Cliente;
 import com.sofca.arbolBinBack.service.ArbolBinarioService;
 import com.sofca.arbolBinBack.service.IClienteService;
 
-@CrossOrigin(origins = "http://localhost:9876", maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
 @RequestMapping("/api")
 public class ClienteRestController {
@@ -83,22 +83,19 @@ public class ClienteRestController {
 		
 		if(nodoArbol != null) {
 			
-			nodoArbol.setDocumento(cliente.getDocumento());
-			nodoArbol.setNombre(cliente.getNombre());
-			nodoArbol.setCorreo(cliente.getCorreo());
-			nodoArbol.setDireccion(cliente.getDireccion());
+//			nodoArbol.setDocumento(cliente.getDocumento());
+//			nodoArbol.setNombre(cliente.getNombre());
+//			nodoArbol.setCorreo(cliente.getCorreo());
+//			nodoArbol.setDireccion(cliente.getDireccion());
 			
-			arbolBinarioService.actualizarNodo(nodoArbol);
+			arbolBinarioService.actualizarNodo(cliente);
 			
 			
 			Cliente oldCliente = clienteService.findCliente(cliente);
 			
 			if(oldCliente != null) {
 				
-				oldCliente.setDocumento(cliente.getDocumento());
-				oldCliente.setNombre(cliente.getNombre());
-				oldCliente.setCorreo(cliente.getCorreo());
-				oldCliente.setDireccion(cliente.getDireccion());
+				oldCliente.add(cliente);
 				
 				oldCliente = clienteService.updateCliente(oldCliente);
 				

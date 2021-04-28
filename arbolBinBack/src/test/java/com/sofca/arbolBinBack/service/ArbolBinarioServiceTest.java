@@ -26,7 +26,6 @@ class ArbolBinarioServiceTest {
 	@Test
 	void t1_testGetNodo() {
 		
-		
 		Cliente cliente = arbolBinarioService.getNodo("100");
 		
 		String nombreExpected = "Juanita";
@@ -91,12 +90,7 @@ class ArbolBinarioServiceTest {
 	@Test
 	void t4_testGuardarRegistro() {
 		
-		Cliente newCliente = new Cliente();
-		
-		newCliente.setDocumento("12");
-		newCliente.setNombre("test");
-		newCliente.setCorreo("test@gmail.com");
-		newCliente.setDireccion("test direccion");
+		Cliente newCliente = new Cliente("12", "test", "test@gmail.com", "test direccion");
 		
 		clienteService.save(newCliente);
 		

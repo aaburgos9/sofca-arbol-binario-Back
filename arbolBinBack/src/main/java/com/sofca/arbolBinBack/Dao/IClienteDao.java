@@ -10,5 +10,4 @@ public interface IClienteDao extends CrudRepository<Cliente, Long>{
 	
 	public Cliente findByDocumento(String documento);
 	
-	
 }
