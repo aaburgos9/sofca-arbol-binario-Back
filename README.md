@@ -23,3 +23,7 @@ Es necesario establecer usario y contraseña en:
 spring.datasource.username=
 
 spring.datasource.password=
+
+# Maven
+
+Puede usar el comando mvn install despues de clonar el proyecto desde el repositorio o importar como proyecto maven desde eclipse IDE
